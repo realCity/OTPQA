@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python2
+
 # simple script to request a bunch of AWS spot instances, all of which will run profiler and
 # report their results to the same database server.
 

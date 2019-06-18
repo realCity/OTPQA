@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 from imposm.parser import OSMParser
 from random import random, randint, shuffle
 from zipfile import ZipFile

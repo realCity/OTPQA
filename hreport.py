@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 import simplejson as json
 import numpy as np
 

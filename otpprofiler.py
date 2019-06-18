@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python2
 
 import urllib2, time, itertools, json
 import subprocess, urllib, random
@@ -284,6 +284,7 @@ def run(connect_args) :
     fast  = connect_args.pop('fast')
     host = connect_args.pop('host')
     profile = connect_args.pop('profile')
+    date = connect_args.pop('date')
     print("profile=%s"%profile)
     info = getServerInfo(host)
     while retry > 0 and info == None:
@@ -313,7 +314,7 @@ def run(connect_args) :
         oid = params.pop('oid')
         tid = params.pop('tid')
 
-        params['date'] = DATE
+        params['date'] = date
         if profile:
             api_method = 'profile'
             params['from'] = params.pop('fromPlace')
@@ -369,6 +370,7 @@ if __name__=="__main__":
     parser.add_argument('-n', '--notes')
     parser.add_argument('-r', '--retry', type=int, default=5)
     parser.add_argument('-p', '--profile', action='store_true', default=False)
+    parser.add_argument('-d', '--date', type=str)
     args = parser.parse_args()
 
     # args is a non-iterable, non-mapping Namespace (allowing usage in the form args.name),

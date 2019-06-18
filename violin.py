@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 # -*- coding: utf-8 -*-
 # based on http://pyinsci.blogspot.fr/2009/09/violin-plot-with-matplotlib.html
 # by Flavio Coelho 
